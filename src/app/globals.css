@@ -1,6 +1,6 @@
 :root {
     --bg:white;
-    --textColor: black;
+    --textColor: #E2CB95;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
 }
@@ -13,6 +13,7 @@
 
 body {
     max-width: 100vw;
+    background-color: #000C13;
 }
 
 a {
@@ -21,7 +22,7 @@ a {
 }
 
 .dark {
-    --bg: #0f172a;
+    --bg: #000C13;
     --textColor: #ddd;
     --softBg: #1f273a;
     --softTextColor: #a6a6a6;
@@ -30,7 +31,7 @@ a {
 .container {
     min-height: 100vh;
     background-color: var(--bg);
-    color: var(--textColor);
+    color: #E2CB95;
 }
 
 .wrapper {

@@ -8,6 +8,10 @@ const Featured = () => {
       <h1 className={styles.title}>
         Turning you, into the developer <b className={styles.bold}>every company dreams about</b>
       </h1>
+      <h2 className={styles.secTitle}>
+        The Free Content Here covers almost everything you need <br/> 
+        To Be In The Top 1% of Developers
+      </h2>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
           <Image src="/p1.jpeg" alt='' fill className={styles.image} />

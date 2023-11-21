@@ -6,6 +6,11 @@
     font-size: 96px;
     font-weight: 300;
   }
+
+  .secTitle {
+    font-size: 45px;
+    font-weight: 100;
+  }
   
   .post {
     margin-top: 60px;

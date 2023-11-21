@@ -13,10 +13,14 @@ const Navbar = () => {
         <Image src="/twitter.png" alt='intagram' width={24} height={24}/>
         <Image src="/github.png" alt='tiktok' width={24} height={24}/>
         <Image src="/youtube.png" alt='youtube' width={24} height={24}/>
+        <Image src="/tiktok.png" alt='youtube' width={24} height={24}/>
+        <Image src="/instagram.png" alt='youtube' width={24} height={24}/>
       </div>
-      <div className={styles.logo}>DevsCove</div>
+      <div className={styles.logo}>
+        <Image src="/logos.png" alt='youtube' width={128} height={128}/>
+      </div>
       <div className={styles.links}>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         <Link href="/" className={styles.link}>Home</Link>
         <Link href="/" className={styles.link}>Contact</Link>
         <Link href="/" className={styles.link}>About</Link>
