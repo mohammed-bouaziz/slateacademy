@@ -3,59 +3,44 @@ import styles from "./categoryList.module.css"
 import Link from 'next/link'
 import Image from 'next/image'
 
-const CategoryList = () => {
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/categories", {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+};
+
+const CategoryList = async () => {
+
+  const data = await getData();
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
-        <Link href="/blog?cat=style" className={`${styles.category} ${styles.python}`}>
-          <Image src="/style.png" 
-                  alt=''
-                  width={32}
-                  height={32}
-                  className={styles.image} />
-          Python
-        </Link>
-        <Link href="/blog?cat=style" className={`${styles.category} ${styles.software}`}>
-          <Image src="/coding.png" 
-                  alt=''
-                  width={32}
-                  height={32}
-                  className={styles.image} />
-          Software
-        </Link>
-        <Link href="/blog?cat=style" className={`${styles.category} ${styles.ml}`}>
-          <Image src="/culture.png" 
-                  alt=''
-                  width={32}
-                  height={32}
-                  className={styles.image} />
-          Machine Learning
-        </Link>
-        <Link href="/blog?cat=style" className={`${styles.category} ${styles.ds}`}>
-          <Image src="/fashion.png" 
-                  alt=''
-                  width={32}
-                  height={32}
-                  className={styles.image} />
-          Data Science
-        </Link>
-        <Link href="/blog?cat=style" className={`${styles.category} ${styles.math}`}>
-          <Image src="/food.png" 
-                  alt=''
-                  width={32}
-                  height={32}
-                  className={styles.image} />
-          Math
-        </Link>
-        <Link href="/blog?cat=style" className={`${styles.category} ${styles.ip}`}>
-          <Image src="/travel.png" 
-                  alt=''
-                  width={32}
-                  height={32}
-                  className={styles.image} />
-          Interview Prep
-        </Link>
+        {data?.map((item) => (
+          <Link
+            href={`/blog?cat=${item.slug}`}
+            className={`${styles.category} ${styles[item.slug]}`}
+            key={item._id}
+          >
+            {item.img && (
+              <Image
+                src={item.img}
+                alt=""
+                width={32}
+                height={32}
+                className={styles.image}
+              />
+            )}
+            {item.title}
+          </Link>
+        ))}
       </div>
     </div>
   )

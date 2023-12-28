@@ -23,27 +23,27 @@
   border-radius: 10px;
 }
 
-.category.python {
+.category.Python {
   background-color: #57c4ff31;
 }
 
-.category.software {
+.category.Software {
   background-color: #da85c731;
 }
 
-.category.ml {
+.category.Machine-Learning {
   background-color: #7fb88133;
 }
 
-.category.ds {
+.category.Javascript {
   background-color: #ff795736;
 }
 
-.category.math {
+.category.Math {
   background-color: #ffb04f45;
 }
 
-.category.ip {
+.category.Interview {
   background-color: #5e4fff31;
 }
 

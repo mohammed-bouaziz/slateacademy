@@ -74,3 +74,21 @@ a {
     }
 }
 
+.ql-container{
+    font-size: 28px !important;
+  }
+  
+  .quill > .ql-container > .ql-editor.ql-blank::before{
+    color: #b3b3b1;
+  }
+
+  .ql-editor .ql-syntax {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: monospace;
+  }
+
+  .singlePage_content__QU5pL {
+    color: #ddd;
+  }
